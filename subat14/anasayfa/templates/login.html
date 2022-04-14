@@ -1,0 +1,26 @@
+{% extends "homebase.html" %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block slider %}
+    <div class="hero-image" id="full-width">
+        <div class="hero-text-form">
+            <form class="text-center" method="POST">
+                <h3>Lütfen Giriş Yapınız</h3>
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                    {{form}}
+                </div>
+                <br>
+                <button type="submit" class="btn btn-lg btn-success">
+                    Giriş Yapınız
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+{% endblock slider %}  
+
